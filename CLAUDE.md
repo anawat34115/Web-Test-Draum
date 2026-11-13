@@ -9,15 +9,19 @@
 ## ไฟล์
 | ไฟล์ | หน้าที่ |
 |---|---|
-| `HOME.html` | หน้าแรก — **ใช้ตัวนี้เป็นตัวจริง** (ลิงก์ในเมนูทุกหน้าชี้มาที่ไฟล์นี้) |
-| `index.html` | สำเนาของ HOME.html ไว้เปิดเป็นหน้าแรกเวลาใช้ server — ตอนนี้รูป hero ขวาเสีย (`src="/images/"`) ถ้าแก้ HOME ให้แก้ index ตามด้วย หรือคัดลอกทับทั้งไฟล์ |
+| `index.html` | หน้าแรก (เดิมชื่อ HOME.html) — ลิงก์ "หน้าแรก" ในเมนูทุกหน้าชี้มาที่ไฟล์นี้ |
 | `about.html` | เกี่ยวกับเรา (ประวัติ, ดร.อั้ม, โรงงาน `#factory`, OEM) |
 | `contact.html` | ติดต่อเรา (ช่องทางติดต่อ, เวลาทำการ, OEM/ตัวแทน, `#locations`, FAQ) |
 | `styles.css` | CSS กลางของทุกหน้า |
 | `app.js` | ปุ่มเพิ่ม/ลดจำนวนสินค้า, เพิ่มลงตะกร้า (เดโม), ส่วน "Why Dr.Aum" แบบ interactive, พื้นหลังแคปซูล canvas + ปุ่ม pause |
 | `images/` | รูปทั้งหมด (โลโก้ `dr-aum-logo.png`, `sge-chem-logo.png`, แบนเนอร์, สินค้า `prod-*`, รีวิว `rev-full-*`, หมวด `cat-*`) |
 
-> โฟลเดอร์ `../idea/` เป็นเวอร์ชันเก่า **ไม่ต้องแก้และไม่ต้องอ้างอิง**
+> โฟลเดอร์ `idea/` เป็นเวอร์ชันเก่า **ไม่ต้องแก้และไม่ต้องอ้างอิง**
+
+## Deploy
+- GitHub repo (public): https://github.com/anawat34115/Web-Test-Draum
+- เว็บ (GitHub Pages จาก branch `main` ที่ root): https://anawat34115.github.io/Web-Test-Draum/
+- push เข้า `main` แล้วเว็บอัปเดตเองภายใน ~1 นาที ไฟล์เว็บทั้งหมดต้องอยู่ที่ root ของ repo
 
 ## Design tokens (อยู่ใน `:root` ของ styles.css)
 - ฟอนต์: **Noto Sans Thai** (300–700) ทั้งเว็บ ห้ามเพิ่มฟอนต์อื่น
@@ -33,7 +37,7 @@
 - Section: `.sec-block` (padding บน 72px), `.sec-padded-bottom` (เพิ่ม padding ล่าง 72px), `.sec-blue-bg`, `.sec-highlight-bg`
 - หัวข้อ: `.eyebrow-plain` (14px ฟ้า) + `.sec-title` (32px/700 กรมท่า)
 - ปุ่ม: `.btn` + `.btn-primary` / `.btn-outline` / `.btn-white` / `.btn-gray-pill` (pill, สูง 44px)
-- Header: `.orig-header` (sticky, โลโก้ + ช่องค้นหา + ไอคอน + เมนู `.orig-header-nav`) / Footer: `.orig-footer` — **ทุกหน้าต้องใช้ header/footer ชุดเดียวกัน** (คัดลอกจาก HOME.html)
+- Header: `.orig-header` (sticky, โลโก้ + ช่องค้นหา + ไอคอน + เมนู `.orig-header-nav`) / Footer: `.orig-footer` — **ทุกหน้าต้องใช้ header/footer ชุดเดียวกัน** (คัดลอกจาก index.html)
 - การ์ด: หมวด `.cat-card`, สินค้า `.prod-card`, บทความ `.article-card`
 - Grid: `.cat-grid-6`, `.product-grid-4`, `.article-grid-3`, `.grid-3-to-1`, `.grid-2-to-1`
 - Breakpoints: 1240px / 1024px / 768px
@@ -50,6 +54,6 @@
 
 ## หน้าที่ยังต้องทำ (รวม ~10 หน้า)
 ยังไม่ได้กำหนดรายการ — ถามลูกค้า/ทีมก่อนเริ่มหน้าใหม่ แล้วอัปเดตรายการไว้ตรงนี้
-- [x] Home (`HOME.html`)
+- [x] Home (`index.html`)
 - [x] About (`about.html`)
 - [x] Contact (`contact.html`)
