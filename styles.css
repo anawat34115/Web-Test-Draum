@@ -2789,6 +2789,11 @@ img {
   color: var(--blue-primary);
 }
 
+/* ติ๊กถูกใต้ปุ่ม hero ใช้สีชมพูแบรนด์ เหมือนเครื่องหมายถูกในหน้าอื่น */
+.oem-hero-checks svg {
+  color: #FF2E7E;
+}
+
 .oem-hero-img {
   flex: 0 0 52%;
   border-radius: 24px;
