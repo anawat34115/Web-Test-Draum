@@ -3882,3 +3882,47 @@ img {
     padding: 12px 0 0;
   }
 }
+
+/* ==========================================================================
+   OEM ตารางระยะเวลา: แบบเรียบตาม sgethai.com (หน้าสเปกสินค้า)
+   พื้นขาว ไม่มีกรอบ/มุมมน/หัวสีเข้ม แบ่งแถวด้วยเส้นบาง
+   ========================================================================== */
+.oem-table-wrap {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.oem-table {
+  font-size: 16px;
+}
+
+.oem-table th,
+.oem-table td {
+  padding: 16px 16px 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.oem-table thead th {
+  background: transparent;
+  color: var(--navy-800);
+  font-weight: 700;
+  border-bottom: 2px solid var(--navy-800);
+}
+
+.oem-table tbody th {
+  font-weight: 700;
+}
+
+.oem-note {
+  padding: 16px 0 0;
+}
+
+@media (max-width: 768px) {
+  .oem-table th,
+  .oem-table td {
+    padding: 12px 12px 12px 0;
+    font-size: 14px;
+  }
+}
