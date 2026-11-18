@@ -503,3 +503,27 @@ document.addEventListener('DOMContentLoaded', () => {
   sort.addEventListener('change', () => { page = 1; render(); });
   render();
 });
+
+/* ==========================================================================
+   PRODUCT PAGE TABS (product.html) — รายละเอียดสินค้า / รีวิว
+   ลง Avada ใช้ Tabs element แทนได้เลย
+   ========================================================================== */
+(function () {
+  const tabs = document.querySelectorAll('.js-pd-tab');
+  if (!tabs.length) return;
+  const panels = document.querySelectorAll('.js-pd-panel');
+
+  function openTab(name) {
+    tabs.forEach((t) => {
+      const on = t.dataset.tab === name;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    panels.forEach((p) => { p.hidden = p.dataset.panel !== name; });
+  }
+
+  tabs.forEach((t) => t.addEventListener('click', () => openTab(t.dataset.tab)));
+  document.querySelectorAll('.js-pd-tab-link').forEach((a) => {
+    a.addEventListener('click', () => openTab(a.dataset.tab));
+  });
+})();
