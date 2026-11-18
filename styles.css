@@ -2786,12 +2786,7 @@ img {
 .oem-check-list svg,
 .oem-cond-list svg {
   flex: none;
-  color: var(--blue-primary);
-}
-
-/* ติ๊กถูกใต้ปุ่ม hero ใช้สีชมพูแบรนด์ เหมือนเครื่องหมายถูกในหน้าอื่น */
-.oem-hero-checks svg {
-  color: #FF2E7E;
+  color: #FF2E7E; /* ติ๊กถูกใช้สีชมพูแบรนด์ เหมือนหน้าอื่น */
 }
 
 .oem-hero-img {
