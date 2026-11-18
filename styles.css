@@ -3713,3 +3713,172 @@ img {
 .prod-title a:hover {
   color: var(--blue-primary);
 }
+
+/* ==========================================================================
+   ลดความเป็น "การ์ด AI" (18 พ.ย. 2026)
+   - เงาเหลือเฉพาะการ์ดสินค้า (.prod-card) ที่เหลือใช้เส้นขอบบางแทน
+   - หน้า OEM: เปลี่ยน 3 ส่วนจากกริดการ์ดเป็น ลิสต์แบ่งเส้น / 2 คอลัมน์ / แถวขั้นตอน
+   ========================================================================== */
+.cat-card,
+.oem-banner-card,
+.cat-showcase-banner,
+.staggered-img-box,
+.article-card,
+.shop-cat-strip,
+.shop-filter-card,
+.shop-why-item,
+.shop-info-card,
+.oem-hero-img,
+.oem-stats,
+.oem-pkg,
+.oem-table-wrap,
+.oem-base,
+.oem-work-img {
+  box-shadow: none;
+}
+
+.article-card,
+.shop-cat-strip,
+.shop-why-item {
+  border: 1px solid var(--border-light);
+}
+
+/* หัว section ชิดซ้าย (ใช้กับบาง section เพื่อไม่ให้ทุกส่วนจัดกลางเหมือนกัน) */
+#oem-products .shop-sec-head,
+.oem-svc-sec .shop-sec-head,
+#oem-process .shop-sec-head {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* OEM ส่วนที่ 2: 4 กลุ่มสินค้า — หัวข้อซ้าย ลิสต์แบ่งเส้นขวา */
+#oem-products .container {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 48px;
+  align-items: start;
+}
+
+#oem-products .shop-sec-head {
+  margin-bottom: 0;
+}
+
+#oem-products .oem-cat-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border-light);
+}
+
+#oem-products .oem-cat-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon title price"
+    "icon desc  price";
+  column-gap: 24px;
+  row-gap: 4px;
+  padding: 24px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-light);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#oem-products .oem-cat-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+#oem-products .oem-cat-card .oem-icon { grid-area: icon; }
+#oem-products .oem-cat-card h3 { grid-area: title; }
+#oem-products .oem-cat-card p { grid-area: desc; }
+
+#oem-products .oem-cat-price {
+  grid-area: price;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: right;
+}
+
+/* OEM ส่วนที่ 3: บริการ — 2 คอลัมน์ ไม่มีกล่อง แบ่งด้วยเส้น */
+.oem-svc-sec .oem-svc-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 48px;
+}
+
+.oem-svc-sec .oem-svc {
+  padding: 24px 0;
+  background: transparent;
+  border-top: 1px solid var(--border-blue);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.oem-svc-sec .oem-icon {
+  background: #FFFFFF;
+}
+
+/* OEM ส่วนที่ 5: 8 ขั้นตอน — แถวเลขลำดับ มีเส้นบน ไม่มีกล่อง */
+#oem-process .oem-steps {
+  gap: 40px 24px;
+}
+
+#oem-process .oem-step {
+  padding: 16px 0 0;
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--border-blue);
+  border-radius: 0;
+}
+
+#oem-process .oem-step-num {
+  color: var(--blue-primary);
+}
+
+@media (max-width: 1024px) {
+  #oem-products .container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  #oem-products .oem-cat-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #oem-products .oem-cat-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-areas:
+      "icon title"
+      "icon desc"
+      "icon price";
+    column-gap: 16px;
+    padding: 16px 0;
+  }
+
+  #oem-products .oem-cat-price {
+    text-align: left;
+    margin-top: 4px;
+  }
+
+  .oem-svc-sec .oem-svc-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .oem-svc-sec .oem-svc {
+    padding: 16px 0;
+  }
+
+  #oem-process .oem-steps {
+    gap: 24px 16px;
+  }
+
+  #oem-process .oem-step {
+    padding: 12px 0 0;
+  }
+}
