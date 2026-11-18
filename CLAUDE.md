@@ -14,6 +14,7 @@
 | `contact.html` | ติดต่อเรา (ช่องทางติดต่อ, เวลาทำการ, OEM/ตัวแทน, `#locations`, FAQ) |
 | `shop.html` | สินค้าทั้งหมด + หน้าหมวดสินค้าใช้ไฟล์เดียวกัน (`shop.html?cat=supplement / detox / antiaging / superfood / cleaning / best`) — โครงอ้างอิง sgeenergy.co.th/solarcell-product |
 | `oem.html` | Landing โรงงานรับผลิต OEM / ODM (เนื้อหาอิงหน้า OEM ของ sgechem.com) |
+| `product.html` | หน้ารายละเอียดสินค้า (ตัวอย่าง: คอลลาเจน เปปไทด์) — มีเลข อย. ส่วนผสม วิธีทาน คำเตือน ตามเอกสาร Ref เว็บขายอาหารเสริม ข้อความใน `[ ]` คือข้อมูลที่รอของจริง ยังไม่มีลิงก์จากหน้าอื่น |
 | `styles.css` | CSS กลางของทุกหน้า |
 | `app.js` | ปุ่มเพิ่ม/ลดจำนวนสินค้า, เพิ่มลงตะกร้า (เดโม), ส่วน "Why Dr.Aum" แบบ interactive, พื้นหลังแคปซูล canvas + ปุ่ม pause |
 | `images/` | รูปทั้งหมด (โลโก้ `dr-aum-logo.png`, `sge-chem-logo.png`, แบนเนอร์, สินค้า `prod-*`, รีวิว `rev-full-*`, หมวด `cat-*`) |
@@ -61,3 +62,4 @@
 - [x] Contact (`contact.html`)
 - [x] ร้านค้า + หมวดสินค้า (`shop.html`) — ดราฟต์แรก 18 พ.ย. 2026 รอลูกค้าดู
 - [x] โรงงาน OEM (`oem.html`) — ดราฟต์แรก 18 พ.ย. 2026
+- [x] รายละเอียดสินค้า (`product.html`) — ดราฟต์แรก 18 พ.ย. 2026 รอข้อมูลจริง (เลข อย. ส่วนผสม วิธีทาน)
