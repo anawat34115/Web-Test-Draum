@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtn = e.target.closest('.js-add-cart');
     if (!addBtn) return;
 
-    const card = addBtn.closest('.prod-card');
+    const card = addBtn.closest('.prod-card, .pd-buy');
     const id = addBtn.dataset.id || (card ? card.dataset.id : 'prod-' + Date.now());
     const name = addBtn.dataset.name || (card ? card.querySelector('.prod-title')?.textContent.trim() : 'สินค้า Dr. Aum');
     const price = parseFloat(addBtn.dataset.price || '250');
