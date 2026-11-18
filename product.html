@@ -56,53 +56,39 @@
 
   <main>
     <!-- ======================================================================
-         SECTION 1: PRODUCT TOP (รูปสินค้าซ้าย + ข้อมูลและปุ่มสั่งซื้อขวา)
-         โครงอ้างอิง sgeenergy.co.th/product/huawei-inverter-sun2000-100ktl-m2/
-         ข้อมูลสินค้าจริงจาก sgechem.com (Dr. Aum ผงคาเคา จากเนเธอร์แลนด์ 200 กรัม)
+         SECTION 1: PRODUCT (รูปซ้าย + ข้อมูลและปุ่มสั่งซื้อขวา)
+         อิงหน้าสินค้าเดิมบน sgechem.com (ผงคาเคา เนเธอร์แลนด์ 200 กรัม) — ไม่ต้องมีอะไรเยอะ
+         ลง Avada ใช้ WooCommerce product layout ได้เลย
          ====================================================================== -->
     <section class="sec-block pd-top-sec">
       <div class="container">
         <nav class="shop-breadcrumb" aria-label="breadcrumb">
-          <a href="index.html">หน้าแรก</a><span>/</span><a href="shop.html">สินค้าทั้งหมด</a><span>/</span><a href="shop.html?cat=superfood">ซุปเปอร์ฟู้ด</a><span>/</span><span>ผงคาเคา Cacao Powder</span>
+          <a href="index.html">หน้าแรก</a><span>/</span><a href="shop.html">สินค้าทั้งหมด</a><span>/</span><span>Dr. Aum ผงคาเคา Cacao Powder จากเนเธอร์แลนด์ ขนาด 200 กรัม</span>
         </nav>
 
         <div class="pd-top">
-          <div class="pd-gallery">
-            <div class="pd-main-img">
-              <span class="prod-rank-badge">ขายดีอันดับ 1</span>
-              <img src="images/prod-cacao.png" alt="Dr. Aum ผงคาเคา Cacao Powder จากเนเธอร์แลนด์ ขนาด 200 กรัม">
-            </div>
-            <p class="pd-img-note">[รอรูปสินค้าเพิ่ม: ด้านหน้า / ด้านหลังฉลาก / ผงชงในแก้ว]</p>
+          <div class="pd-main-img">
+            <img src="images/prod-cacao.png" alt="Dr. Aum ผงคาเคา Cacao Powder จากเนเธอร์แลนด์ ขนาด 200 กรัม">
           </div>
 
           <div class="pd-buy">
             <p class="pd-viewing">[x] คน กำลังดูสินค้านี้อยู่</p>
             <h1 class="pd-title">Dr. Aum ผงคาเคา Cacao Powder จากเนเธอร์แลนด์ ขนาด 200 กรัม</h1>
-            <div class="pd-meta">
-              <div class="prod-rating"><span class="star">★</span><span>4.8</span></div>
-              <span class="pd-meta-sep">·</span>
-              <a href="#pd-tabs" class="pd-meta-link js-pd-tab-link" data-tab="reviews">[x] รีวิว</a>
-              <span class="pd-meta-sep">·</span>
-              <span>แบรนด์ Dr. Aum</span>
-            </div>
-
-            <div class="pd-price-row">
-              <p class="pd-price">฿350.00</p>
-              <span class="pd-price-note">ยิ่งซื้อยิ่งลด รับส่วนลดสูงสุด 20%</span>
-            </div>
-
-            <ul class="pd-highlights">
-              <li>ผงคาเคานำเข้าจากเนเธอร์แลนด์ ผ่านกระบวนการ Dutch Process</li>
-              <li>ไม่มีน้ำตาล ชงได้ทั้งร้อนและเย็น</li>
-              <li>ขนาด 200 กรัม ชงได้ประมาณ 20 แก้ว</li>
+            <p class="pd-price">฿350.00</p>
+            <ul class="pd-offers">
+              <li>ส่งฟรีทั่วประเทศ</li>
+              <li>ยิ่งซื้อยิ่งลด รับส่วนลดสูงสุด 20%</li>
             </ul>
 
-            <dl class="pd-facts">
-              <div><dt>เลขสารบบอาหาร (อย.)</dt><dd>[xx-x-xxxxx-x-xxxx]</dd></div>
-              <div><dt>ขนาดบรรจุ</dt><dd>200 กรัม</dd></div>
-              <div><dt>แหล่งวัตถุดิบ</dt><dd>เนเธอร์แลนด์</dd></div>
-              <div><dt>รูปแบบ</dt><dd>ผงชงดื่ม</dd></div>
-            </dl>
+            <div class="pd-desc">
+              <p>Dr.Aum ผงคาเคา จากประเทศเนเธอร์แลนด์ ขนาด 200 กรัม<br>Dr. Aum Cacao Powder Netherlands 200 Gm.</p>
+              <p><strong>ขนาดบรรจุ:</strong> 200 กรัม (ชงได้ประมาณ 20 แก้ว)<br><strong>ส่วนประกอบสำคัญ:</strong> สกัดจากผลคาเคา ผ่านกระบวนการ Dutch Process</p>
+              <ul class="pd-highlights">
+                <li>ไม่มีน้ำตาล</li>
+                <li>กลิ่นหอม ละลายง่าย</li>
+                <li>ชงได้ทั้งร้อนและเย็น</li>
+              </ul>
+            </div>
 
             <div class="pd-actions">
               <div class="qty-stepper">
@@ -111,12 +97,9 @@
                 <button type="button" class="qty-btn qty-plus" aria-label="เพิ่มจำนวน">+</button>
               </div>
               <button type="button" class="add-cart-btn js-add-cart" data-id="sf-3" data-name="ผงคาเคา Cacao Powder (เนเธอร์แลนด์) 200 กรัม" data-price="350" data-img="images/prod-cacao.png"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4h3l2.2 10.5h11.3l2-8H6.2"/><path d="M7.7 14.5a2 2 0 0 0 0 4h11.3"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17" cy="20.5" r="1.5"/></svg><span>ใส่ตะกร้า</span></button>
+              <button type="button" class="btn btn-primary pd-buy-now js-add-cart js-toggle-cart" data-id="sf-3" data-name="ผงคาเคา Cacao Powder (เนเธอร์แลนด์) 200 กรัม" data-price="350" data-img="images/prod-cacao.png">ซื้อทันที</button>
             </div>
-            <div class="pd-actions-2">
-              <button type="button" class="btn btn-primary js-add-cart js-toggle-cart" data-id="sf-3" data-name="ผงคาเคา Cacao Powder (เนเธอร์แลนด์) 200 กรัม" data-price="350" data-img="images/prod-cacao.png">ซื้อทันที</button>
-              <a href="https://page.line.me/364xrojj?openQrModal=true" class="btn btn-outline">สั่งซื้อผ่าน LINE</a>
-            </div>
-            <p class="pd-buy-note">สั่งซื้อออนไลน์ได้ทันที หรือแชท LINE เพื่อรับคำแนะนำส่วนตัว</p>
+            <p class="pd-buy-note">สั่งซื้อออนไลน์ได้ทันที หรือ <a href="https://page.line.me/364xrojj?openQrModal=true">แชท LINE</a> เพื่อรับคำแนะนำส่วนตัว</p>
 
             <ul class="pd-trust-grid">
               <li><strong>ขายดีอันดับ 1</strong><span>บน Shopee และ TikTok</span></li>
@@ -124,144 +107,20 @@
               <li><strong>การันตี</strong><span>สินค้าแท้ 100%</span></li>
               <li><strong>บริการปรึกษา</strong><span>โดยผู้เชี่ยวชาญ</span></li>
             </ul>
+
+            <p class="pd-warning">คำเตือน: เด็กและสตรีมีครรภ์ไม่ควรรับประทาน · ควรกินอาหารหลากหลาย ครบ 5 หมู่ ในสัดส่วนที่เหมาะสมเป็นประจำ · ไม่มีผลในการป้องกันหรือรักษาโรค</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SECTION 2: แท็บ รายละเอียดสินค้า / รีวิว (แบบ sgeenergy) — ลง Avada ใช้ Tabs element
-         ====================================================================== -->
-    <section class="sec-block sec-padded-bottom sec-blue-bg" id="pd-tabs">
-      <div class="container">
-        <div class="pd-tab-bar" role="tablist">
-          <button type="button" class="pd-tab is-active js-pd-tab" role="tab" aria-selected="true" data-tab="detail">รายละเอียดสินค้า</button>
-          <button type="button" class="pd-tab js-pd-tab" role="tab" aria-selected="false" data-tab="reviews">รีวิวจากผู้ใช้ ([x])</button>
-        </div>
-
-        <!-- แท็บ 1: รายละเอียดสินค้า -->
-        <div class="pd-panel js-pd-panel" data-panel="detail" role="tabpanel">
-          <div class="pd-intro">
-            <p>Dr. Aum ผงคาเคา จากประเทศเนเธอร์แลนด์ สกัดจากผลคาเคา ผ่านกระบวนการ Dutch Process ได้ผงสีเข้ม กลิ่นหอม รสชาติกลมกล่อม ละลายง่าย ไม่มีน้ำตาล ชงดื่มแทนเครื่องดื่มช็อกโกแลตทั่วไป หรือใส่ในสมูทตี้ โยเกิร์ต และเบเกอรี่ได้</p>
-            <ul class="pd-check-list">
-              <li>ผงคาเคาแท้ นำเข้าจากเนเธอร์แลนด์</li>
-              <li>ผ่านกระบวนการ Dutch Process กลิ่นหอม รสไม่เปรี้ยว</li>
-              <li>ไม่มีน้ำตาล ปรับความหวานเองได้</li>
-              <li>ขนาด 200 กรัม ชงได้ประมาณ 20 แก้ว</li>
-              <li>ผลิตและบรรจุในโรงงานมาตรฐาน GHPs HACCP</li>
-            </ul>
-          </div>
-
-          <div class="pd-feature">
-            <div class="pd-feature-img"><img src="images/prod-cacao.png" alt="ผงคาเคา Dr. Aum"></div>
-            <div class="pd-feature-text">
-              <h2 class="pd-card-title">ผงคาเคาจากเนเธอร์แลนด์ ผ่าน Dutch Process</h2>
-              <p>Dutch Process คือการปรับสภาพผงคาเคาให้มีความเป็นกรดลดลง ทำให้ได้สีเข้ม กลิ่นหอม รสชาติกลมกล่อม และละลายน้ำได้ง่ายกว่าผงคาเคาทั่วไป</p>
-            </div>
-          </div>
-          <div class="pd-feature pd-feature-rev">
-            <div class="pd-feature-img"><img src="images/oem-factory.png" alt="โรงงานผลิต SGE Chem"></div>
-            <div class="pd-feature-text">
-              <h2 class="pd-card-title">บรรจุในโรงงานของเราเอง</h2>
-              <p>ผลิตและบรรจุโดย บริษัท เอสจีอี เคม จำกัด ในโรงงานที่ได้มาตรฐาน GHPs HACCP และได้รับอนุญาตจาก อย. ตรวจสอบคุณภาพทุกล็อตก่อนส่งถึงมือคุณ</p>
-            </div>
-          </div>
-
-          <div class="pd-info-grid">
-            <article class="shop-info-card pd-card">
-              <h2 class="pd-card-title">ส่วนประกอบ</h2>
-              <table class="pd-table">
-                <thead><tr><th>ส่วนประกอบ</th><th>ปริมาณ</th></tr></thead>
-                <tbody>
-                  <tr><td>ผงคาเคา (Dutch Process)</td><td>[100%]</td></tr>
-                </tbody>
-              </table>
-              <p class="pd-card-note"><strong>ข้อมูลสำหรับผู้แพ้อาหาร:</strong> [ตามฉลากจริง]</p>
-            </article>
-
-            <article class="shop-info-card pd-card">
-              <h2 class="pd-card-title">วิธีรับประทาน</h2>
-              <ol class="pd-steps">
-                <li>ผสมผงคาเคา [1–2 ช้อนชา] กับน้ำร้อนหรือนม [150–200] มล.</li>
-                <li>คนให้ละลาย เติมความหวานได้ตามชอบ หรือเติมน้ำแข็งดื่มเย็น</li>
-                <li>เก็บในที่แห้ง พ้นแสงแดด ปิดฝาให้สนิทหลังใช้</li>
-              </ol>
-            </article>
-
-            <article class="shop-info-card pd-card pd-card-warn pd-card-wide">
-              <h2 class="pd-card-title">คำเตือน</h2>
-              <ul class="pd-list">
-                <li>เด็กและสตรีมีครรภ์ไม่ควรรับประทาน</li>
-                <li>ควรกินอาหารหลากหลาย ครบ 5 หมู่ ในสัดส่วนที่เหมาะสมเป็นประจำ</li>
-                <li>ไม่มีผลในการป้องกันหรือรักษาโรค</li>
-                <li>[คำเตือนเพิ่มเติมตามฉลากจริง]</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="pd-doc">
-            <div class="pd-doc-text">
-              <h2 class="pd-card-title">เอกสารข้อมูลสินค้า</h2>
-              <p>[ฉลากสินค้า / ผลวิเคราะห์จากแล็บ (PDF)]</p>
-            </div>
-            <span class="btn btn-outline pd-doc-btn">ดาวน์โหลด [รอไฟล์]</span>
-          </div>
-        </div>
-
-        <!-- แท็บ 2: รีวิวจากผู้ใช้ -->
-        <div class="pd-panel js-pd-panel" data-panel="reviews" role="tabpanel" hidden>
-          <div class="pd-review-summary">
-            <p class="pd-review-score">4.8</p>
-            <div>
-              <p class="pd-review-stars">★★★★★</p>
-              <p class="pd-card-note">จาก [x] รีวิว · รีวิวจริงจาก Shopee / Google Review (รอดึงข้อมูล)</p>
-            </div>
-          </div>
-          <div class="pd-info-grid">
-            <article class="shop-info-card pd-card">
-              <p class="pd-review-stars">★★★★★</p>
-              <p>“[ข้อความรีวิวจริงจากลูกค้า]”</p>
-              <p class="pd-card-note">[ชื่อลูกค้า] · [วันที่]</p>
-            </article>
-            <article class="shop-info-card pd-card">
-              <p class="pd-review-stars">★★★★★</p>
-              <p>“[ข้อความรีวิวจริงจากลูกค้า]”</p>
-              <p class="pd-card-note">[ชื่อลูกค้า] · [วันที่]</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 3: มาตรฐานการผลิต (โลโก้ใบรับรอง แบบ Thorne)
-         ====================================================================== -->
-    <section class="sec-block sec-padded-bottom">
-      <div class="container">
-        <div class="shop-sec-head">
-          <p class="eyebrow-plain">มาตรฐานการผลิต</p>
-          <h2 class="sec-title">ผลิตในโรงงานของเราเอง ตรวจสอบได้</h2>
-        </div>
-        <div class="pd-cert-row">
-          <div class="pd-cert"><span class="pd-cert-logo">อย.</span><p>ได้รับอนุญาตจาก อย.</p></div>
-          <div class="pd-cert"><span class="pd-cert-logo">GMP</span><p>หลักเกณฑ์วิธีการที่ดีในการผลิต</p></div>
-          <div class="pd-cert"><span class="pd-cert-logo">GHPs</span><p>สุขลักษณะที่ดีในการผลิตอาหาร</p></div>
-          <div class="pd-cert"><span class="pd-cert-logo">HACCP</span><p>ระบบควบคุมความปลอดภัยอาหาร</p></div>
-        </div>
-        <p class="pd-img-note pd-cert-note">[รอไฟล์โลโก้ใบรับรองจริง มาแทนป้ายตัวอักษร]</p>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 4: สินค้าแนะนำ (การ์ดเดียวกับหน้า shop)
+         SECTION 2: สินค้าที่เกี่ยวข้อง (การ์ดเดียวกับหน้า shop)
          ====================================================================== -->
     <section class="sec-block sec-padded-bottom sec-highlight-bg">
       <div class="container">
-        <div class="shop-sec-head">
-          <p class="eyebrow-plain">ซุปเปอร์ฟู้ด</p>
-          <h2 class="sec-title">สินค้าแนะนำ</h2>
-        </div>
-        <div class="product-grid-4 pd-related">
+        <h2 class="sec-title pd-sec-title">สินค้าที่เกี่ยวข้อง</h2>
+        <div class="product-grid-4">
         <article class="prod-card" data-id="sf-1" data-cat="superfood" data-price="250" data-order="12" data-rank="4">
           <div class="prod-thumb-wrap">
           <span class="prod-rank-badge">ขายดี #4</span>
@@ -347,8 +206,102 @@
           </div>
         </article>
         </div>
-        <div class="sec-bottom-cta">
-          <a href="shop.html?cat=superfood" class="btn-gray-pill">ดูสินค้าหมวดซุปเปอร์ฟู้ดทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: สินค้าขายดี
+         ====================================================================== -->
+    <section class="sec-block sec-padded-bottom">
+      <div class="container">
+        <h2 class="sec-title pd-sec-title">สินค้าขายดี</h2>
+        <div class="product-grid-4">
+        <article class="prod-card" data-id="anti-1" data-cat="antiaging" data-price="250" data-order="8" data-rank="1">
+          <div class="prod-thumb-wrap">
+          <span class="prod-rank-badge">ขายดี #1</span>
+            <img src="images/prod-astaxanthin.png" alt="แอสตาแซนธิน คอมเพล็กซ์ 6mg">
+          </div>
+          <div class="prod-formula-bar">Astaxanthin Complex</div>
+          <div class="prod-body">
+            <div class="prod-tags"><span class="prod-tag">ส่งฟรีทั่วประเทศ</span><span class="prod-tag">ส่วนลด 20%</span></div>
+            <div class="prod-rating"><span class="star">★</span><span>4.8</span></div>
+            <h3 class="prod-title">แอสตาแซนธิน คอมเพล็กซ์ 6mg</h3>
+            <div class="prod-price-row"><span class="prod-price">฿250.00</span></div>
+            <div class="prod-cart-controls">
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn qty-minus" aria-label="ลดจำนวน">−</button>
+                <input type="number" class="qty-input" value="1" min="1" max="99" aria-label="จำนวน">
+                <button type="button" class="qty-btn qty-plus" aria-label="เพิ่มจำนวน">+</button>
+              </div>
+              <button type="button" class="add-cart-btn js-add-cart" data-id="anti-1" data-name="แอสตาแซนธิน คอมเพล็กซ์ 6mg" data-price="250" data-img="images/prod-astaxanthin.png"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4h3l2.2 10.5h11.3l2-8H6.2"/><path d="M7.7 14.5a2 2 0 0 0 0 4h11.3"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17" cy="20.5" r="1.5"/></svg><span>ใส่ตะกร้า</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" data-id="sup-2" data-cat="supplement" data-price="250" data-order="1" data-rank="2">
+          <div class="prod-thumb-wrap">
+          <span class="prod-rank-badge">ขายดี #2</span>
+            <img src="images/prod-collagen.png" alt="คอลลาเจน เปปไทด์">
+          </div>
+          <div class="prod-formula-bar alt-blue">Collagen Peptide</div>
+          <div class="prod-body">
+            <div class="prod-tags"><span class="prod-tag">ส่งฟรีทั่วประเทศ</span><span class="prod-tag">ส่วนลด 20%</span></div>
+            <div class="prod-rating"><span class="star">★</span><span>4.8</span></div>
+            <h3 class="prod-title">คอลลาเจน เปปไทด์</h3>
+            <div class="prod-price-row"><span class="prod-price">฿250.00</span></div>
+            <div class="prod-cart-controls">
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn qty-minus" aria-label="ลดจำนวน">−</button>
+                <input type="number" class="qty-input" value="1" min="1" max="99" aria-label="จำนวน">
+                <button type="button" class="qty-btn qty-plus" aria-label="เพิ่มจำนวน">+</button>
+              </div>
+              <button type="button" class="add-cart-btn js-add-cart" data-id="sup-2" data-name="คอลลาเจน เปปไทด์" data-price="250" data-img="images/prod-collagen.png"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4h3l2.2 10.5h11.3l2-8H6.2"/><path d="M7.7 14.5a2 2 0 0 0 0 4h11.3"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17" cy="20.5" r="1.5"/></svg><span>ใส่ตะกร้า</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" data-id="det-2" data-cat="detox" data-price="250" data-order="5" data-rank="3">
+          <div class="prod-thumb-wrap">
+          <span class="prod-rank-badge">ขายดี #3</span>
+            <img src="images/prod-psyllium-powder.png" alt="ไซเลี่ยม ฮัสค์ (ชนิดผง)">
+          </div>
+          <div class="prod-formula-bar alt-blue">Psyllium Husk Powder</div>
+          <div class="prod-body">
+            <div class="prod-tags"><span class="prod-tag">ส่งฟรีทั่วประเทศ</span><span class="prod-tag">ส่วนลด 20%</span></div>
+            <div class="prod-rating"><span class="star">★</span><span>4.8</span></div>
+            <h3 class="prod-title">ไซเลี่ยม ฮัสค์ (ชนิดผง)</h3>
+            <div class="prod-price-row"><span class="prod-price">฿250.00</span></div>
+            <div class="prod-cart-controls">
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn qty-minus" aria-label="ลดจำนวน">−</button>
+                <input type="number" class="qty-input" value="1" min="1" max="99" aria-label="จำนวน">
+                <button type="button" class="qty-btn qty-plus" aria-label="เพิ่มจำนวน">+</button>
+              </div>
+              <button type="button" class="add-cart-btn js-add-cart" data-id="det-2" data-name="ไซเลี่ยม ฮัสค์ (ชนิดผง)" data-price="250" data-img="images/prod-psyllium-powder.png"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4h3l2.2 10.5h11.3l2-8H6.2"/><path d="M7.7 14.5a2 2 0 0 0 0 4h11.3"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17" cy="20.5" r="1.5"/></svg><span>ใส่ตะกร้า</span></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod-card" data-id="sup-1" data-cat="supplement" data-price="250" data-order="0">
+          <div class="prod-thumb-wrap">
+            <img src="images/prod-tomato.png" alt="ผงมะเขือเทศ ออแกนิค 100%">
+          </div>
+          <div class="prod-formula-bar">Tomato Powder</div>
+          <div class="prod-body">
+            <div class="prod-tags"><span class="prod-tag">ส่งฟรีทั่วประเทศ</span><span class="prod-tag">ส่วนลด 20%</span></div>
+            <div class="prod-rating"><span class="star">★</span><span>4.8</span></div>
+            <h3 class="prod-title">ผงมะเขือเทศ ออแกนิค 100%</h3>
+            <div class="prod-price-row"><span class="prod-price">฿250.00</span></div>
+            <div class="prod-cart-controls">
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn qty-minus" aria-label="ลดจำนวน">−</button>
+                <input type="number" class="qty-input" value="1" min="1" max="99" aria-label="จำนวน">
+                <button type="button" class="qty-btn qty-plus" aria-label="เพิ่มจำนวน">+</button>
+              </div>
+              <button type="button" class="add-cart-btn js-add-cart" data-id="sup-1" data-name="ผงมะเขือเทศ ออแกนิค 100%" data-price="250" data-img="images/prod-tomato.png"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4h3l2.2 10.5h11.3l2-8H6.2"/><path d="M7.7 14.5a2 2 0 0 0 0 4h11.3"/><circle cx="9.5" cy="20.5" r="1.5"/><circle cx="17" cy="20.5" r="1.5"/></svg><span>ใส่ตะกร้า</span></button>
+            </div>
+          </div>
+        </article>
         </div>
       </div>
     </section>

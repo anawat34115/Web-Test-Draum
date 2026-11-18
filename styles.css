@@ -3507,9 +3507,9 @@ img {
 }
 
 /* ==========================================================================
-   PRODUCT DETAIL PAGE (product.html) — หน้ารายละเอียดสินค้า (ตัวอย่าง: คอลลาเจน เปปไทด์)
-   อ้างอิงเอกสาร "Ref เว็บไซต์ขายอาหารเสริม — Dr. Aum": เลข อย. ส่วนผสม วิธีทาน คำเตือน
-   ใบรับรองแบบ Thorne / ข้อความในวงเล็บ [ ] คือข้อมูลที่รอของจริง
+   PRODUCT DETAIL PAGE (product.html) — หน้าสินค้า (single product)
+   อิงหน้าสินค้าเดิมบน sgechem.com: รูป + ชื่อ ราคา ข้อเสนอ คำอธิบาย ปุ่มซื้อ
+   แถบความมั่นใจ 4 ช่อง, สินค้าที่เกี่ยวข้อง, สินค้าขายดี / ข้อความใน [ ] รอข้อมูลจริง
    ========================================================================== */
 .sec-block.pd-top-sec {
   padding-top: 24px;
@@ -3524,13 +3524,11 @@ img {
 }
 
 .pd-main-img {
-  position: relative;
   aspect-ratio: 1 / 1;
   background: #FFFFFF;
   border: 1px solid var(--border-light);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-card);
 }
 
 .pd-main-img img {
@@ -3540,202 +3538,12 @@ img {
   display: block;
 }
 
-.pd-img-note {
-  margin-top: 12px;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
 .pd-buy {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.pd-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--navy-800);
-  margin: -8px 0 0;
-}
-
-.pd-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.pd-price {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--blue-primary);
-  margin: 0;
-}
-
-.pd-facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0;
-  padding: 16px;
-  background: var(--bg-soft);
-  border-radius: 16px;
-}
-
-.pd-facts dt {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.pd-facts dd {
-  margin: 2px 0 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--navy-800);
-}
-
-.pd-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.pd-actions .qty-stepper {
-  height: 48px;
-}
-
-.pd-info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.pd-card-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--navy-800);
-  margin: 0 0 4px;
-}
-
-.pd-card-note {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.pd-list,
-.pd-steps {
-  margin: 0;
-  padding-left: 20px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text-body);
-}
-
-.pd-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-}
-
-.pd-table th,
-.pd-table td {
-  padding: 10px 0;
-  text-align: left;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.pd-table th {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.pd-table td:last-child,
-.pd-table th:last-child {
-  text-align: right;
-}
-
-.pd-card-warn {
-  border-color: #FAD1DF;
-  background: #FFF8FA;
-}
-
-.pd-cert-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.pd-cert {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 24px 16px;
-  text-align: center;
-  background: #FFFFFF;
-  border: 1px solid var(--border-blue);
-  border-radius: 20px;
-}
-
-.pd-cert-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--bg-soft);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--blue-primary);
-}
-
-.pd-cert p {
-  font-size: 14px;
-  color: var(--text-body);
-}
-
-.pd-cert-note {
-  text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .pd-top {
-    gap: 32px;
-  }
-
-  .pd-cert-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .sec-block.pd-top-sec {
-    padding-bottom: 48px;
-  }
-
-  .pd-top,
-  .pd-info-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .pd-title {
-    font-size: 28px;
-  }
-
-  .pd-price {
-    font-size: 28px;
-  }
-
-  .pd-facts {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-/* --- Product page v2: โครงแบบ sgeenergy (คนกำลังดู, ปุ่มซื้อ 3 แบบ, แถบความมั่นใจ, แท็บ, จุดเด่นมีรูป, เอกสาร) --- */
 .pd-viewing {
   font-size: 14px;
   font-weight: 600;
@@ -3748,58 +3556,72 @@ img {
   margin-right: 6px;
 }
 
-.pd-meta-link {
-  color: var(--blue-primary);
-  font-weight: 600;
+.pd-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--navy-800);
+  margin: 0;
 }
 
-.pd-price-row {
+.pd-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--blue-primary);
+  margin: 0;
+}
+
+.pd-offers {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.pd-price-note {
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--bg-soft);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--blue-primary);
-}
-
-.pd-highlights,
-.pd-check-list {
+  flex-direction: column;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.pd-desc {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-body);
 }
 
-.pd-highlights li::before,
-.pd-check-list li::before {
+.pd-highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pd-highlights li::before {
   content: "✓";
   margin-right: 8px;
   font-weight: 700;
   color: #FF2E7E;
 }
 
-.pd-actions .add-cart-btn {
-  flex: 1;
-  height: 48px;
-  font-size: 16px;
+.pd-actions {
+  display: flex;
+  gap: 12px;
 }
 
-.pd-actions-2 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.pd-actions .qty-stepper {
+  height: 48px;
+}
+
+.pd-actions .add-cart-btn,
+.pd-buy-now {
+  flex: 1;
+  height: 48px;
+  min-height: 48px;
+  font-size: 16px;
 }
 
 .pd-buy-note {
@@ -3834,160 +3656,47 @@ img {
   color: var(--navy-800);
 }
 
-.pd-tab-bar {
-  display: flex;
-  gap: 8px;
+.pd-warning {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.pd-sec-title {
   margin-bottom: 32px;
-  border-bottom: 1px solid var(--border-blue);
-}
-
-.pd-tab {
-  padding: 12px 24px;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  background: none;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-muted);
-  cursor: pointer;
-}
-
-.pd-tab.is-active {
-  border-bottom-color: var(--blue-primary);
-  color: var(--blue-primary);
-}
-
-.pd-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.pd-panel[hidden] {
-  display: none;
-}
-
-.pd-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 32px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: var(--shadow-card);
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-body);
-}
-
-.pd-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: center;
-}
-
-.pd-feature-rev .pd-feature-img {
-  order: 2;
-}
-
-.pd-feature-img {
-  aspect-ratio: 4 / 3;
-  background: #FFFFFF;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.pd-feature-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.pd-feature-text {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-body);
-}
-
-.pd-card-wide {
-  grid-column: 1 / -1;
-}
-
-.pd-doc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 24px 32px;
-  background: #FFFFFF;
-  border: 1px dashed var(--border-blue);
-  border-radius: 20px;
-}
-
-.pd-doc p {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.pd-doc-btn {
-  flex-shrink: 0;
-  opacity: 0.6;
-  cursor: default;
-}
-
-.pd-review-summary {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.pd-review-score {
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--navy-800);
-  margin: 0;
-}
-
-.pd-review-stars {
-  color: #F59E0B;
-  letter-spacing: 2px;
-  margin: 0;
 }
 
 @media (max-width: 1024px) {
+  .pd-top {
+    gap: 32px;
+  }
+
   .pd-trust-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .pd-feature {
+  .sec-block.pd-top-sec {
+    padding-bottom: 48px;
+  }
+
+  .pd-top {
     grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
   }
 
-  .pd-feature-rev .pd-feature-img {
-    order: 0;
+  .pd-title,
+  .pd-price {
+    font-size: 26px;
   }
 
-  .pd-intro {
-    padding: 24px;
+  .pd-actions {
+    flex-wrap: wrap;
   }
 
-  .pd-doc {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-  }
-
-  .pd-tab {
-    padding: 12px 16px;
+  .pd-buy-now {
+    flex-basis: 100%;
   }
 }
 
