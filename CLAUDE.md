@@ -12,6 +12,8 @@
 | `index.html` | หน้าแรก (เดิมชื่อ HOME.html) — ลิงก์ "หน้าแรก" ในเมนูทุกหน้าชี้มาที่ไฟล์นี้ |
 | `about.html` | เกี่ยวกับเรา (ประวัติ, ดร.อั้ม, โรงงาน `#factory`, OEM) |
 | `contact.html` | ติดต่อเรา (ช่องทางติดต่อ, เวลาทำการ, OEM/ตัวแทน, `#locations`, FAQ) |
+| `shop.html` | สินค้าทั้งหมด + หน้าหมวดสินค้าใช้ไฟล์เดียวกัน (`shop.html?cat=supplement / detox / antiaging / superfood / cleaning / best`) — โครงอ้างอิง sgeenergy.co.th/solarcell-product |
+| `oem.html` | Landing โรงงานรับผลิต OEM / ODM (เนื้อหาอิงหน้า OEM ของ sgechem.com) |
 | `styles.css` | CSS กลางของทุกหน้า |
 | `app.js` | ปุ่มเพิ่ม/ลดจำนวนสินค้า, เพิ่มลงตะกร้า (เดโม), ส่วน "Why Dr.Aum" แบบ interactive, พื้นหลังแคปซูล canvas + ปุ่ม pause |
 | `images/` | รูปทั้งหมด (โลโก้ `dr-aum-logo.png`, `sge-chem-logo.png`, แบนเนอร์, สินค้า `prod-*`, รีวิว `rev-full-*`, หมวด `cat-*`) |
@@ -57,3 +59,5 @@
 - [x] Home (`index.html`)
 - [x] About (`about.html`)
 - [x] Contact (`contact.html`)
+- [x] ร้านค้า + หมวดสินค้า (`shop.html`) — ดราฟต์แรก 18 พ.ย. 2026 รอลูกค้าดู
+- [x] โรงงาน OEM (`oem.html`) — ดราฟต์แรก 18 พ.ย. 2026

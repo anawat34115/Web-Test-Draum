@@ -382,3 +382,124 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCart();
 });
+
+/* ==========================================================================
+   SHOP PAGE (shop.html) — กรองหมวดจาก ?cat=, ค้นหา, เรียงลำดับ, แบ่งหน้า
+   (เดโมในดราฟต์เท่านั้น บน WordPress ใช้หน้า Shop / Product Category ของ WooCommerce)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('.js-shop-grid');
+  if (!grid) return;
+
+  const CATS = {
+    all: { title: 'สินค้าทั้งหมด' },
+    supplement: { title: 'อาหารเสริม', sub: 'บำรุงผิวพรรณ สดใส', img: 'images/banner-supplement.png' },
+    detox: { title: 'ไฟเบอร์ & ดีท็อกซ์', sub: 'ไฟเบอร์จากธรรมชาติ ชงดื่มง่าย', img: 'images/banner-detox.png' },
+    antiaging: { title: 'Anti-aging', sub: 'เริ่มต้นที่การดูแลจากภายใน', img: 'images/banner-antiaging.png' },
+    superfood: { title: 'Super Food', sub: 'ผงผักผลไม้และสารอาหารเข้มข้น', img: 'images/banner-superfood.png' },
+    cleaning: { title: 'น้ำยาทำความสะอาด' },
+    best: { title: 'สินค้าขายดี' }
+  };
+  const PER_PAGE = 12;
+  let cat = new URLSearchParams(location.search).get('cat');
+  if (!CATS[cat]) cat = 'all';
+  const info = CATS[cat];
+  let page = 1;
+
+  const cards = [...grid.querySelectorAll('.prod-card')];
+  const search = document.querySelector('.js-shop-search');
+  const sort = document.querySelector('.js-shop-sort');
+  const countEl = document.querySelector('.js-shop-count');
+  const empty = document.querySelector('.js-shop-empty');
+  const pager = document.querySelector('.js-shop-pagination');
+  const banner = document.querySelector('.js-shop-banner');
+
+  document.querySelector('.js-shop-title').textContent = info.title;
+  if (cat !== 'all') {
+    document.title = info.title + ' – Dr. Aum Store / SGE Chem';
+    const crumb = document.querySelector('.js-shop-crumb');
+    crumb.textContent = info.title;
+    crumb.hidden = false;
+    document.querySelector('.js-shop-crumb-sep').hidden = false;
+  }
+  if (info.img) {
+    banner.querySelector('.js-shop-banner-title').textContent = info.title;
+    banner.querySelector('.js-shop-banner-sub').textContent = info.sub;
+    const img = banner.querySelector('.js-shop-banner-img');
+    img.src = info.img;
+    img.alt = info.title + ' ' + info.sub;
+    banner.hidden = false;
+  }
+  document.querySelectorAll('.shop-cat-item, .shop-filter-item').forEach((a) => {
+    a.classList.toggle('active', a.dataset.cat === cat);
+  });
+
+  const inCat = (c) => {
+    if (cat === 'all') return true;
+    if (cat === 'best') return !!c.dataset.rank;
+    return c.dataset.cat === cat;
+  };
+  const rank = (c) => Number(c.dataset.rank || 99);
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const list = cards.filter((c) => inCat(c) && (!q || c.textContent.toLowerCase().includes(q)));
+    const mode = sort.value === 'default' && cat === 'best' ? 'best' : sort.value;
+    list.sort((a, b) => {
+      if (mode === 'price-asc') return a.dataset.price - b.dataset.price || a.dataset.order - b.dataset.order;
+      if (mode === 'price-desc') return b.dataset.price - a.dataset.price || a.dataset.order - b.dataset.order;
+      if (mode === 'best') return rank(a) - rank(b) || a.dataset.order - b.dataset.order;
+      return a.dataset.order - b.dataset.order;
+    });
+
+    const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    if (page > pages) page = pages;
+    cards.forEach((c) => { c.hidden = true; });
+    list.forEach((c, i) => {
+      grid.appendChild(c);
+      c.hidden = !(i >= (page - 1) * PER_PAGE && i < page * PER_PAGE);
+    });
+
+    countEl.textContent = list.length;
+    grid.hidden = list.length === 0;
+    empty.hidden = list.length > 0;
+    if (q) {
+      empty.querySelector('h3').textContent = 'ไม่พบสินค้าที่ตรงกับ "' + search.value.trim() + '"';
+      empty.querySelector('p').textContent = 'ลองค้นหาด้วยคำอื่น หรือสอบถามทีมงานทาง LINE';
+    } else {
+      empty.querySelector('h3').textContent = 'ยังไม่มีสินค้าในหมวดนี้บนเว็บไซต์';
+      empty.querySelector('p').textContent = 'สนใจสินค้าหมวดนี้ หรือต้องการสั่งจำนวนมาก ติดต่อทีมงานได้ทาง LINE';
+    }
+
+    pager.innerHTML = '';
+    if (pages > 1) {
+      for (let i = 1; i <= pages; i += 1) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'shop-page-btn' + (i === page ? ' active' : '');
+        b.dataset.page = i;
+        b.textContent = i;
+        pager.appendChild(b);
+      }
+      if (page < pages) {
+        const next = document.createElement('button');
+        next.type = 'button';
+        next.className = 'shop-page-btn';
+        next.dataset.page = page + 1;
+        next.textContent = 'ถัดไป ›';
+        pager.appendChild(next);
+      }
+    }
+  }
+
+  pager.addEventListener('click', (e) => {
+    const b = e.target.closest('.shop-page-btn');
+    if (!b) return;
+    page = Number(b.dataset.page);
+    render();
+    document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+  });
+  search.addEventListener('input', () => { page = 1; render(); });
+  sort.addEventListener('change', () => { page = 1; render(); });
+  render();
+});
